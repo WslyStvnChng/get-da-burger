@@ -1,0 +1,93 @@
+body {
+    background-image: url("/assets/img/bg.png");
+    background-position: left top;
+    background-repeat: repeat;
+}
+
+.clearfix:after {
+    clear: both;
+    content: '';
+    display: block;
+}
+
+h2.body-header {
+    font-size: 150%;
+    margin-bottom: 10px;
+}
+
+#head-wrapper {
+    border-bottom: 1px solid red;
+}
+
+#cta-label {
+    width: 35%;
+}
+
+#new-burger {
+    width: 25%;
+    min-width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#submit-btn {
+    width: 25%;
+    min-width: 150px;
+}
+
+#right-col {
+    border-left: 1px solid red;
+}
+
+.not-devoured {
+    padding: 8px;
+    margin-bottom: 10px;
+    color: #ffc107;
+    background-color: #dc3545;
+    border-radius: 10px;
+    border: 1px solid #ffc107;
+}
+
+.devoured {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid black;
+    opacity: .5;
+}
+
+.burger-name-not-devoured,
+.burger-id-not-devoured {
+    line-height: 2.5;
+    float: left;
+    font-weight: bold;
+}
+
+.burger-id-not-devoured {
+    margin-right: 5px;
+}
+
+.devour-burger {
+    float: right;
+}
+
+@media screen and (max-width: 767px) {
+    .burger-name-not-devoured,
+    .burger-id-not-devoured,
+    .devour-burger {
+        float: none;
+    }
+    .burger-name-not-devoured,
+    .burger-id-not-devoured {
+        line-height: 1;
+        margin-bottom: 7px;
+    }
+    .devour-burger {
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 10px;
+    }
+    .devoured {
+        width: 80%;
+    }
+}

@@ -1,0 +1,52 @@
+<div class="container mt-3">
+
+  <div id="new-burger-row" class="row">
+    <div class="col-12 text-center">
+      <div id="head-wrapper" class="pb-5">
+        <h1>Eat-Da-Burger</h1>
+        <img src="/assets/img/burger.png" class="img-fluid" id="burger-img" alt="Responsive image">
+        <form class="create-form">
+          <div class="form-group">
+            <label id="cta-label" for="name">Enter the name of a burger you'd like to eat:</label>
+            <input type="text" id="new-burger" class="form-control" name="name"></input>
+          </div>
+          <button type="submit" id="submit-btn" class="btn btn-outline-danger">Add Burger</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="row my-4">
+
+    <div class="col-6 text-center">
+      <div id="left-col-wrapper">
+        <h2 class="body-header">Ready to Eat</h2>
+        <div id="not-devoured-wrapper">
+          {{#each burgers}} {{#unless devoured}}
+          <div class="not-devoured clearfix">
+            <span class="burger-id-not-devoured">{{id}}. </span>
+            <span class="burger-name-not-devoured">{{burger_name}}</span>
+            <button data-id="{{id}}" data-devour-status="0" class="devour-burger btn btn-outline-warning">Devour burger!</button>
+          </div>
+          {{/unless}} {{/each}}
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-6 text-center" id="right-col">
+      <div id="right-col-wrapper">
+        <h2 class="body-header">Devoured</h2>
+        <div id="devoured-wrapper">
+          {{#each burgers}} {{#if devoured}}
+          <div class="devoured mx-auto">
+            <span class="burger-id-devoured">{{id}}. </span>
+            <span class="burger-name-devoured" data-devour-status="1">{{burger_name}}</span>
+          </div>
+          {{/if}} {{/each}}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
