@@ -1,3 +1,4 @@
+<h1>Burgres</h1>
 <div class="container mt-3">
 
   <div id="new-burger-row" class="row">
@@ -22,7 +23,7 @@
       <div id="left-col-wrapper">
         <h2 class="body-header">Ready to Eat</h2>
         <div id="not-devoured-wrapper">
-          {{#each burgers}} {{#unless devoured}}
+          {{#each burger}} {{#unless devoured}}
           <div class="not-devoured clearfix">
             <span class="burger-id-not-devoured">{{id}}. </span>
             <span class="burger-name-not-devoured">{{burger_name}}</span>
@@ -38,7 +39,7 @@
       <div id="right-col-wrapper">
         <h2 class="body-header">Devoured</h2>
         <div id="devoured-wrapper">
-          {{#each burgers}} {{#if devoured}}
+          {{#each burger}} {{#if devoured}}
           <div class="devoured mx-auto">
             <span class="burger-id-devoured">{{id}}. </span>
             <span class="burger-name-devoured" data-devour-status="1">{{burger_name}}</span>
