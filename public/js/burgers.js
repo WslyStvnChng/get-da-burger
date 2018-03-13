@@ -1,37 +1,54 @@
-$(".create-form").on("submit", function(event) {
-  event.preventDefault();
+$(function() {
+  $(".change-devoured").on("click", function(event) {
+    var id = $(this).data("id");
+    var newDevoured = $(this).data("newdevoured");
 
-  var newBurgerName = $("#new-burger")
-    .val()
-    .trim();
+    var newDevouredUpdate = {
+      devoured: newDevoured
+    };
 
-  var newBurger = { name: newBurgerName };
-
-  $.ajax("/api/burgers", {
-    type: "POST",
-    data: newBurger
-  }).then(function(res) {
-    $("#new-burger").val("");
-    location.reload();
+    // Send the PUT request.
+    $.ajax("/api/burger/" + id, {
+      type: "PUT",
+      data: newDevouredUpdate
+    }).then(function() {
+      console.log("changed devoured to", newDevoured);
+      // Reload the page to get the updated list
+      location.reload();
+    });
   });
-});
 
-$(".devour-burger").on("click", function(event) {
-  event.preventDefault();
+  $(".create-form").on("submit", function(event) {
+    // Make sure to preventDefault on a submit event.
+    event.preventDefault();
 
-  var id = $(this).data("id");
-  var devouredStatus = $(this).data("devour-status");
+    var newBurger = {
+      burger_name: $("#ca")
+        .val()
+        .trim()
+    };
 
-  if (devouredStatus == "0") {
-    var devouredBurger = { newDevouredStatus: 1 };
-  } else {
-    console.log("Error - incorrect devoured status");
-  }
+    // Send the POST request.
+    $.ajax("/api/burger", {
+      type: "POST",
+      data: newBurger
+    }).then(function() {
+      console.log("created new burger");
+      // Reload the page to get the updated list
+      location.reload();
+    });
+  });
 
-  $.ajax("/api/burgers/" + id, {
-    type: "PUT",
-    data: devouredBurger
-  }).then(function(res) {
-    location.reload();
+  $(".delete-burger").on("click", function(event) {
+    var id = $(this).data("id");
+
+    // Send the DELETE request.
+    $.ajax("/api/burger/" + id, {
+      type: "DELETE"
+    }).then(function() {
+      console.log("deleted burger", id);
+      // Reload the page to get the updated list
+      location.reload();
+    });
   });
 });
