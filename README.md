@@ -1,32 +1,29 @@
 <h1><strong>Good Burger</strong></h1>
 <tr>
-<p>An application that
+<p>Get-da-Burger is a restaurant app that lets users input the names of burgers they'd like to eat. Whenever a user submits a burger's name, app displays the burger on the left side of the page--waiting to be devoured. Each burger in the waiting area has a devour button. When the user clicks the devour button, it will move to the right side of the screen. 
 </p>
 
-<h2>Getting Started</h2>
-<tr>
-<p>Install:</p>
-<ul>
-<li>npm init</li>
-<li>npm install</li>
-</ul>
 
 <h2>Built With</h2>
 <ul>
-<li>Node.Js</li>
+<li>JavaScript</li>
+ <li>Node</li>
 <li>Express</li>
 <li>MYSQL</li>
 <li>Handlebars</li>
-<li>Homemade ORM</li>
+<li>jQuery</li>
 <li>BootStrap</li>
+<li>Deploy Heroku</li>
 </ul>
 
-
-
-<h2>Author</h2>
+<h2>Dependencies</h2>
 <ul>
-  <li>Steven Cheng</li>
-  <a href="https://github.com/WslyStvnChng/">Click here for Github page</a>
-    </ul>
+<li>Express</li>
+ <li>Body-Parser</li>
+<li>Method-Override</li>
+<li>MYSQL</li>
+<li>Handlebars</li>
+</ul>
+
 
 
