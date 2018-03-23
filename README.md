@@ -21,15 +21,12 @@
 <li>BootStrap</li>
 </ul>
 
-<h2>Application</h2>
-<ol>
-<li>Visit at this page: <a href=""></li>
-<li>Find your friend!</li>
 
-To be continued
 
 <h2>Author</h2>
 <ul>
-<li>Steven Cheng <a href="https://github.com/WslyStvnChng/"></li>
+  <li>Steven Cheng</li>
+  <a href="https://github.com/WslyStvnChng/">Click here for Github page</a>
+    </ul>
 
 
