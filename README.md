@@ -4,6 +4,9 @@
 <p>Get-da-Burger is a restaurant app that let users input the names of burgers they'd like to eat. Whenever a user submits a burger's name, app displays the burger on the left side of the page--waiting to be devoured. Each burger in the waiting area has a devour button. When the user clicks the devour button, it will move to the right side of the screen. 
 </p>
 
+Heroku: https://dry-hamlet-52054.herokuapp.com/
+Github: https://wslystvnchng.github.io/get-da-burger/
+
 
 <h2>Built With</h2>
 <ul>
